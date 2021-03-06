@@ -1,0 +1,440 @@
+2021-03-06 16:48:57 DEBUG    rasa.model  - Extracted model to '/tmp/tmplakwg41s'.
+2021-03-06 16:48:58 DEBUG    rasa.cli.utils  - Parameter 'credentials' not set. Using default location 'credentials.yml' instead.
+2021-03-06 16:48:58 DEBUG    rasa.model  - Extracted model to '/tmp/tmpguije5cn'.
+2021-03-06 16:48:58 INFO     root  - Connecting to channel 'cmdline' which was specified by the '--connector' argument. Any other channels will be ignored. To connect to all given channels, omit the '--connector' argument.
+2021-03-06 16:48:58 DEBUG    sanic.root  - CORS: Configuring CORS with resources: {'/*': {'origins': [''], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': 'filename', 'supports_credentials': True, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/*': {'origins': ''}}, 'intercept_exceptions': True, 'always_send': True}}
+2021-03-06 16:48:58 DEBUG    rasa.core.utils  - Available web server routes: 
+/webhooks/rest                                     GET                            custom_webhook_CmdlineInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_CmdlineInput.receive
+/                                                  GET                            hello
+2021-03-06 16:48:58 INFO     root  - Starting Rasa server on http://localhost:5005
+2021-03-06 16:48:58 DEBUG    rasa.core.utils  - Using the default number of Sanic workers (1).
+2021-03-06 16:48:59 DEBUG    rasa.model  - Extracted model to '/tmp/tmpnh836ign'.
+2021-03-06 16:48:59 INFO     root  - Enabling coroutine debugging. Loop id 94507486406912.
+2021-03-06 16:48:59 DEBUG    rasa.model  - Extracted model to '/tmp/tmpi4u7c2hu'.
+2021-03-06 16:49:05 INFO     rasa.nlu.components  - Added 'MitieNLP' to component cache. Key 'MitieNLP-/home/yx/rasa_test/data/total_word_feature_extractor_zh.dat'.
+2021-03-06 16:49:05 INFO     rasa.nlu.tokenizers.jieba_tokenizer  - Loading Jieba User Dictionary at /tmp/tmpi4u7c2hu/nlu/component_1_JiebaTokenizer/ord_no_dic.txt
+Building prefix dict from the default dictionary ...
+2021-03-06 16:49:05 DEBUG    jieba  - Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+2021-03-06 16:49:05 DEBUG    jieba  - Loading model from cache /tmp/jieba.cache
+Loading model cost 1.062 seconds.
+2021-03-06 16:49:06 DEBUG    jieba  - Loading model cost 1.062 seconds.
+Prefix dict has been built successfully.
+2021-03-06 16:49:06 DEBUG    jieba  - Prefix dict has been built successfully.
+/home/yx/anaconda3/envs/py38/lib/python3.8/site-packages/rasa/nlu/tokenizers/jieba_tokenizer.py:62: ResourceWarning: unclosed file <_io.BufferedReader name='/tmp/tmpi4u7c2hu/nlu/component_1_JiebaTokenizer/ord_no_dic.txt'>
+  jieba.load_userdict(jieba_userdict)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+2021-03-06 16:49:06 INFO     rasa.nlu.tokenizers.jieba_tokenizer  - Loading Jieba User Dictionary at /tmp/tmpi4u7c2hu/nlu/component_1_JiebaTokenizer/express_dic.txt
+/home/yx/anaconda3/envs/py38/lib/python3.8/site-packages/rasa/nlu/tokenizers/jieba_tokenizer.py:62: ResourceWarning: unclosed file <_io.BufferedReader name='/tmp/tmpi4u7c2hu/nlu/component_1_JiebaTokenizer/express_dic.txt'>
+  jieba.load_userdict(jieba_userdict)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+2021-03-06 16:49:06 DEBUG    rasa.core.tracker_store  - Attempting to connect to database via 'mysql+pymysql://root:***@localhost:3306/rasa_test'.
+2021-03-06 16:49:06 ERROR    rasa.core.tracker_store  - Could not create tables: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2021-03-06 16:49:06 DEBUG    rasa.core.tracker_store  - Connection to SQL database 'rasa_test' successful.
+2021-03-06 16:49:06 DEBUG    rasa.core.tracker_store  - Connected to SQLTrackerStore.
+2021-03-06 16:49:06 DEBUG    rasa.core.lock_store  - Connected to lock store 'InMemoryLockStore'.
+2021-03-06 16:49:06 DEBUG    rasa.model  - Extracted model to '/tmp/tmp1_mmm556'.
+2021-03-06 16:49:06 DEBUG    rasa.utils.tensorflow.models  - Loading the model ...
+2021-03-06 16:49:07 DEBUG    rasa.utils.tensorflow.models  - Finished loading the model.
+2021-03-06 16:49:07 DEBUG    rasa.utils.tensorflow.models  - Building tensorflow prediction graph...
+2021-03-06 16:49:12 DEBUG    rasa.utils.tensorflow.models  - Finished building tensorflow prediction graph.
+[93m/home/yx/anaconda3/envs/py38/lib/python3.8/site-packages/rasa/core/policies/fallback.py:64: FutureWarning: 'FallbackPolicy' is deprecated and will be removed in the future. It is recommended to use the 'RulePolicy' instead. (will be removed in 3.0.0)
+  rasa.shared.utils.io.raise_deprecation_warning(
+[0m2021-03-06 16:49:12 INFO     rasa.core.policies.ensemble  - MappingPolicy not included in policy ensemble. Default intents 'restart and back will not trigger actions 'action_restart' and 'action_back'.
+2021-03-06 16:49:12 DEBUG    rasa.core.nlg.generator  - Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-03-06 16:49:12 INFO     root  - Rasa server is up and running.
+Bot loaded. Type a message and press enter (use '/stop' to exit): 
+[6n[?2004h[?25l[0m[?7l[0m[J[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134m                                                                [79C [15C[?7h[0m[?12l[?25h[?25l[?7l[15D[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134m [0m[K[0m
+[0;38;5;134m                                                                               [79C [A[15C[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134m嗨 [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[17D[0m[J[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134m嗨                                                              [79C [0m
+[J[?7h[0m[?12l[?25h[?2004lWarning: Output is not to a terminal (fd=1).
+2021-03-06 16:49:30 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:49:30 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:49:30 DEBUG    rasa.core.lock_store  - Acquired lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:49:30 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2021-03-06 16:49:30 DEBUG    rasa.core.processor  - Starting a new session for conversation ID '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:49:30 DEBUG    rasa.core.processor  - Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x7f57045c0b80>, <rasa.shared.core.events.ActionExecuted object at 0x7f57045c0c10>]'.
+2021-03-06 16:49:30 DEBUG    rasa.core.processor  - Current slot values: 
+	express: None
+	ord_no: None
+2021-03-06 16:49:30 DEBUG    rasa.core.processor  - Received user message '嗨' with intent '{'name': 'greet', 'confidence': 0.7061315073130968}' and entities '[]'
+2021-03-06 16:49:30 DEBUG    rasa.core.processor  - Logged UserUtterance - tracker now has 4 events.
+2021-03-06 16:49:31 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'action_listen'}}]
+2021-03-06 16:49:31 DEBUG    rasa.core.policies.memoization  - There is a memorised next action 'utter_greet'
+2021-03-06 16:49:31 DEBUG    rasa.core.policies.fallback  - NLU confidence threshold met, confidence of fallback action set to core threshold (0.3).
+2021-03-06 16:49:31 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_1_MemoizationPolicy
+2021-03-06 16:49:31 DEBUG    rasa.core.processor  - Predicted next action 'utter_greet' with confidence 1.00.
+2021-03-06 16:49:31 DEBUG    rasa.core.processor  - Action 'utter_greet' ended with events '[BotUttered('您好～', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"template_name": "utter_greet"}, 1615020571.0112193)]'.
+2021-03-06 16:49:31 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_greet'}}]
+2021-03-06 16:49:31 DEBUG    rasa.core.policies.memoization  - There is a memorised next action 'action_listen'
+2021-03-06 16:49:31 DEBUG    rasa.core.policies.fallback  - NLU confidence threshold met, confidence of fallback action set to core threshold (0.3).
+2021-03-06 16:49:31 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_1_MemoizationPolicy
+2021-03-06 16:49:31 DEBUG    rasa.core.processor  - Predicted next action 'action_listen' with confidence 1.00.
+2021-03-06 16:49:31 DEBUG    rasa.core.processor  - Action 'action_listen' ended with events '[]'.
+2021-03-06 16:49:31 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2021-03-06 16:49:31 DEBUG    rasa.core.lock_store  - Deleted lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+您好～
+[6n[?2004h[?25l[0m[?7l[0m[J[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134m                                                                [79C [15C[?7h[0m[?12l[?25h[?25l[?7l[15D[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134m [0m[K[0m
+[0;38;5;134m                                                                               [79C [A[15C[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134m客戶 [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[2D[0;38;5;134m [0m[K[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[2D[0;38;5;134m [0m[K[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134m客戶想查詢送貨時間 [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[33D[0m[J[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134m客戶想查詢送貨時間                                              [79C [0m
+[J[?7h[0m[?12l[?25h[?2004l2021-03-06 16:49:53 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:49:53 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:49:53 DEBUG    rasa.core.lock_store  - Acquired lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:49:53 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2021-03-06 16:49:53 DEBUG    rasa.core.processor  - Starting a new session for conversation ID '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:49:53 DEBUG    rasa.core.processor  - Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x7f56f8731d60>, <rasa.shared.core.events.ActionExecuted object at 0x7f56f8731d30>]'.
+2021-03-06 16:49:53 DEBUG    rasa.core.processor  - Current slot values: 
+	express: None
+	ord_no: None
+2021-03-06 16:49:53 DEBUG    rasa.core.processor  - Received user message '客戶想查詢送貨時間' with intent '{'name': 'search_package_date', 'confidence': 0.5054641398234049}' and entities '[]'
+2021-03-06 16:49:53 DEBUG    rasa.core.processor  - Logged UserUtterance - tracker now has 4 events.
+2021-03-06 16:49:53 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'search_package_date'}, 'prev_action': {'action_name': 'action_listen'}}]
+2021-03-06 16:49:53 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2021-03-06 16:49:53 DEBUG    rasa.core.policies.fallback  - NLU confidence threshold met, confidence of fallback action set to core threshold (0.3).
+2021-03-06 16:49:53 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_0_TEDPolicy
+2021-03-06 16:49:53 DEBUG    rasa.core.processor  - Predicted next action 'action_search_package_date' with confidence 0.90.
+2021-03-06 16:49:53 DEBUG    rasa.core.actions.action  - Calling action endpoint to run action 'action_search_package_date'.
+2021-03-06 16:49:53 DEBUG    rasa.core.processor  - Action 'action_search_package_date' ended with events '[BotUttered('請選取想要查詢的項目，若没有想要的，请忽略此消息', {"elements": null, "quick_replies": null, "buttons": [{"title": "\u5982\u4f55\u67e5\u8a62\u8207\u51fa\u8ca8\u904b\u8f38\u72c0\u6cc1\u76f8\u95dc\u554f\u984c\uff1f", "payload": "/search_express"}, {"title": "\u5982\u4f55\u67e5\u8a62\u8207\u51fa\u8ca8\u8cc7\u6599\u67e5\u8a62\u76f8\u95dc\u554f\u984c\uff1f", "payload": "/search_express"}, {"title": "\u67e5\u8a62\u4e09\u5927\u5feb\u905e\u8ca8\u4ef6\u7684\u7d50\u679c\u3002", "payload": "/search_express"}], "attachment": null, "image": null, "custom": null}, {}, 1615020593.541873)]'.
+2021-03-06 16:49:53 DEBUG    rasa.core.processor  - Current slot values: 
+	express: None
+	ord_no: None
+2021-03-06 16:49:53 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'search_package_date'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'search_package_date'}, 'prev_action': {'action_name': 'action_search_package_date'}}]
+2021-03-06 16:49:53 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2021-03-06 16:49:53 DEBUG    rasa.core.policies.fallback  - NLU confidence threshold met, confidence of fallback action set to core threshold (0.3).
+2021-03-06 16:49:53 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_0_TEDPolicy
+2021-03-06 16:49:53 DEBUG    rasa.core.processor  - Predicted next action 'action_listen' with confidence 1.00.
+2021-03-06 16:49:53 DEBUG    rasa.core.processor  - Action 'action_listen' ended with events '[]'.
+2021-03-06 16:49:53 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2021-03-06 16:49:53 DEBUG    rasa.core.lock_store  - Deleted lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+[6n[?2004h[?25l[0m[?7l[0m[J[0;38;5;68m?[0;38;5;68;1m 請選取想要查詢的項目，若没有想要的，请忽略此消息 [0;38;5;68m (Use arrow keys)           [79C [0m
+[0;38;5;68m » 1: 如何查詢與出貨運輸狀況相關問題？ (/search_express)[0m
+[0;38;5;68m   2: 如何查詢與出貨資料查詢相關問題？ (/search_express)[0m
+[0;38;5;68m   3: 查詢三大快遞貨件的結果。 (/search_express)[0m
+[0;38;5;68m   Type out your own message...                                                [79C [4A[68C[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0m
+[0;38;5;68m   1: 如何查詢與出貨運輸狀況相關問題？ (/search_express)[0m
+[0;38;5;68m » 2: 如何查詢與出貨資料查詢相關問題？ (/search_express)[2A[12C[?7h[0m[?12l[?25h[?25l[?7l[0m
+
+[0;38;5;68m   2: 如何查詢與出貨資料查詢相關問題？ (/search_express)[0m
+[0;38;5;68m » 3: 查詢三大快遞貨件的結果。 (/search_express)[3A[20C[?7h[0m[?12l[?25h[?25l[?7l[68D[0m[J[0;38;5;68m?[0;38;5;68;1m 請選取想要查詢的項目，若没有想要的，请忽略此消息 [0;38;5;134;1m 3: 查詢三大快遞貨件的結果。[79C [0m
+[0;38;5;134;1m(/search_express)[0;38;5;68m                                                              [79C [0m
+[J[?7h[0m[?12l[?25h[?2004l2021-03-06 16:49:56 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:49:56 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:49:56 DEBUG    rasa.core.lock_store  - Acquired lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:49:56 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2021-03-06 16:49:56 DEBUG    rasa.core.processor  - Starting a new session for conversation ID '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:49:56 DEBUG    rasa.core.processor  - Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x7f56f857c8e0>, <rasa.shared.core.events.ActionExecuted object at 0x7f56f8560d60>]'.
+2021-03-06 16:49:56 DEBUG    rasa.core.processor  - Current slot values: 
+	express: None
+	ord_no: None
+2021-03-06 16:49:56 DEBUG    rasa.core.processor  - Received user message '/search_express' with intent '{'name': 'search_express', 'confidence': 1.0}' and entities '[]'
+2021-03-06 16:49:56 DEBUG    rasa.core.processor  - Logged UserUtterance - tracker now has 4 events.
+2021-03-06 16:49:56 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'search_express'}, 'prev_action': {'action_name': 'action_listen'}}]
+2021-03-06 16:49:56 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2021-03-06 16:49:56 DEBUG    rasa.core.policies.fallback  - NLU confidence threshold met, confidence of fallback action set to core threshold (0.3).
+2021-03-06 16:49:56 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_0_TEDPolicy
+2021-03-06 16:49:56 DEBUG    rasa.core.processor  - Predicted next action 'utter_search_express' with confidence 0.99.
+2021-03-06 16:49:56 DEBUG    rasa.core.processor  - Action 'utter_search_express' ended with events '[BotUttered('若您要查詢DHL、FedEx、UPS三大國際快遞進/出貨資料,請先選擇要查詢的貨物是透過哪家快遞公司遞送?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"template_name": "utter_search_express"}, 1615020596.222476)]'.
+2021-03-06 16:49:56 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'search_express'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'search_express'}, 'prev_action': {'action_name': 'utter_search_express'}}]
+2021-03-06 16:49:56 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2021-03-06 16:49:56 DEBUG    rasa.core.policies.fallback  - NLU confidence threshold met, confidence of fallback action set to core threshold (0.3).
+2021-03-06 16:49:56 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_0_TEDPolicy
+2021-03-06 16:49:56 DEBUG    rasa.core.processor  - Predicted next action 'action_listen' with confidence 1.00.
+2021-03-06 16:49:56 DEBUG    rasa.core.processor  - Action 'action_listen' ended with events '[]'.
+2021-03-06 16:49:56 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2021-03-06 16:49:56 DEBUG    rasa.core.lock_store  - Deleted lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+若您要查詢DHL、FedEx、UPS三大國際快遞進/出貨資料,請先選擇要查詢的貨物是透過哪家快遞公司遞送?
+[6n[?2004h[?25l[0m[?7l[0m[J[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134m                                                                [79C [15C[?7h[0m[?12l[?25h[?25l[?7l[15D[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134m [0m[K[0m
+[0;38;5;134m                                                                               [79C [A[15C[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134mU [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134mP [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134mS [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[18D[0m[J[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134mUPS                                                             [79C [0m
+[J[?7h[0m[?12l[?25h[?2004l2021-03-06 16:50:05 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:50:05 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:50:05 DEBUG    rasa.core.lock_store  - Acquired lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:50:05 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2021-03-06 16:50:05 DEBUG    rasa.core.processor  - Starting a new session for conversation ID '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:50:05 DEBUG    rasa.core.processor  - Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x7f56f850be80>, <rasa.shared.core.events.ActionExecuted object at 0x7f56f873b610>]'.
+2021-03-06 16:50:05 DEBUG    rasa.core.processor  - Current slot values: 
+	express: None
+	ord_no: None
+2021-03-06 16:50:05 DEBUG    rasa.core.processor  - Received user message 'UPS' with intent '{'name': 'check_express', 'confidence': 0.7524957774840102}' and entities '[{'entity': 'express', 'start': 0, 'end': 3, 'confidence_entity': 0.8327777954770296, 'value': 'UPS', 'extractor': 'CRFEntityExtractor'}]'
+2021-03-06 16:50:05 DEBUG    rasa.core.processor  - Current slot values: 
+	express: UPS
+	ord_no: None
+2021-03-06 16:50:05 DEBUG    rasa.core.processor  - Logged UserUtterance - tracker now has 5 events.
+2021-03-06 16:50:05 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'check_express', 'entities': ('express',)}, 'slots': {'express': (1.0,)}, 'prev_action': {'action_name': 'action_listen'}}]
+2021-03-06 16:50:05 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2021-03-06 16:50:05 DEBUG    rasa.core.policies.fallback  - NLU confidence threshold met, confidence of fallback action set to core threshold (0.3).
+2021-03-06 16:50:05 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_0_TEDPolicy
+2021-03-06 16:50:05 DEBUG    rasa.core.processor  - Predicted next action 'action_check_express' with confidence 0.98.
+2021-03-06 16:50:05 DEBUG    rasa.core.actions.action  - Calling action endpoint to run action 'action_check_express'.
+2021-03-06 16:50:05 DEBUG    rasa.core.processor  - Action 'action_check_express' ended with events '[BotUttered('請您輸入UPS單號，如需多筆查詢請以『，』分隔。', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1615020605.5928967)]'.
+2021-03-06 16:50:05 DEBUG    rasa.core.processor  - Current slot values: 
+	express: UPS
+	ord_no: None
+2021-03-06 16:50:05 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'check_express', 'entities': ('express',)}, 'slots': {'express': (1.0,)}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'check_express', 'entities': ('express',)}, 'slots': {'express': (1.0,)}, 'prev_action': {'action_name': 'action_check_express'}}]
+2021-03-06 16:50:05 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2021-03-06 16:50:05 DEBUG    rasa.core.policies.fallback  - NLU confidence threshold met, confidence of fallback action set to core threshold (0.3).
+2021-03-06 16:50:05 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_0_TEDPolicy
+2021-03-06 16:50:05 DEBUG    rasa.core.processor  - Predicted next action 'action_listen' with confidence 1.00.
+2021-03-06 16:50:05 DEBUG    rasa.core.processor  - Action 'action_listen' ended with events '[]'.
+2021-03-06 16:50:05 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2021-03-06 16:50:05 DEBUG    rasa.core.lock_store  - Deleted lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+請您輸入UPS單號，如需多筆查詢請以『，』分隔。
+[6n[?2004h[?25l[0m[?7l[0m[J[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134m                                                                [79C [15C[?7h[0m[?12l[?25h[?25l[?7l[15D[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134m [0m[K[0m
+[0;38;5;134m                                                                               [79C [A[15C[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134mt [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134m [0m[K[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134mT [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134mA [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134mB [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134mF [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134m [0m[K[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134m [0m[K[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134m [0m[K[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134m [0m[K[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134mt [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134ma [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134md [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134mf [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134m5 [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134m5 [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134m6 [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[22D[0m[J[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134mtadf556                                                         [79C [0m
+[J[?7h[0m[?12l[?25h[?2004l2021-03-06 16:50:13 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:50:13 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:50:13 DEBUG    rasa.core.lock_store  - Acquired lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:50:13 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2021-03-06 16:50:13 DEBUG    rasa.core.processor  - Starting a new session for conversation ID '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:50:13 DEBUG    rasa.core.processor  - Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x7f56f83a5e80>, <rasa.shared.core.events.ActionExecuted object at 0x7f56f842f8e0>]'.
+2021-03-06 16:50:13 DEBUG    rasa.core.processor  - Current slot values: 
+	express: None
+	ord_no: None
+2021-03-06 16:50:13 DEBUG    rasa.core.processor  - Received user message 'tadf556' with intent '{'name': 'enter_order_number', 'confidence': 0.4522662941912955}' and entities '[{'entity': 'ord_no', 'start': 0, 'end': 7, 'value': 'tadf556', 'extractor': 'RegexEntityExtractor'}]'
+2021-03-06 16:50:13 DEBUG    rasa.core.processor  - Current slot values: 
+	express: None
+	ord_no: tadf556
+2021-03-06 16:50:13 DEBUG    rasa.core.processor  - Logged UserUtterance - tracker now has 5 events.
+2021-03-06 16:50:14 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'enter_order_number', 'entities': ('ord_no',)}, 'slots': {'ord_no': (1.0,)}, 'prev_action': {'action_name': 'action_listen'}}]
+2021-03-06 16:50:14 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2021-03-06 16:50:14 DEBUG    rasa.core.policies.fallback  - NLU confidence threshold met, confidence of fallback action set to core threshold (0.3).
+2021-03-06 16:50:14 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_0_TEDPolicy
+2021-03-06 16:50:14 DEBUG    rasa.core.processor  - Predicted next action 'action_enter_order_number' with confidence 0.79.
+2021-03-06 16:50:14 DEBUG    rasa.core.actions.action  - Calling action endpoint to run action 'action_enter_order_number'.
+2021-03-06 16:50:14 DEBUG    rasa.core.processor  - Action 'action_enter_order_number' ended with events '[BotUttered('暫無tadf556的單號資訊', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1615020614.0219388)]'.
+2021-03-06 16:50:14 DEBUG    rasa.core.processor  - Current slot values: 
+	express: None
+	ord_no: tadf556
+2021-03-06 16:50:14 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'enter_order_number', 'entities': ('ord_no',)}, 'slots': {'ord_no': (1.0,)}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'enter_order_number', 'entities': ('ord_no',)}, 'slots': {'ord_no': (1.0,)}, 'prev_action': {'action_name': 'action_enter_order_number'}}]
+2021-03-06 16:50:14 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2021-03-06 16:50:14 DEBUG    rasa.core.policies.fallback  - NLU confidence threshold met, confidence of fallback action set to core threshold (0.3).
+2021-03-06 16:50:14 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_0_TEDPolicy
+2021-03-06 16:50:14 DEBUG    rasa.core.processor  - Predicted next action 'action_listen' with confidence 0.99.
+2021-03-06 16:50:14 DEBUG    rasa.core.processor  - Action 'action_listen' ended with events '[]'.
+2021-03-06 16:50:14 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2021-03-06 16:50:14 DEBUG    rasa.core.lock_store  - Deleted lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+暫無tadf556的單號資訊
+[6n[?2004h[?25l[0m[?7l[0m[J[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134m                                                                [79C [15C[?7h[0m[?12l[?25h[?25l[?7l[15D[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134m [0m[K[0m
+[0;38;5;134m                                                                               [79C [A[15C[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134mt [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134m8 [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134m6 [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134m [0m[K[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134m [0m[K[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134m [0m[K[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134m查詢 [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134m三大快遞 [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134m貨件的結果 [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[37D[0m[J[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134m查詢三大快遞貨件的結果                                          [79C [0m
+[J[?7h[0m[?12l[?25h[?2004l2021-03-06 16:50:29 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:50:29 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:50:29 DEBUG    rasa.core.lock_store  - Acquired lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:50:29 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2021-03-06 16:50:29 DEBUG    rasa.core.processor  - Starting a new session for conversation ID '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:50:29 DEBUG    rasa.core.processor  - Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x7f56f8280460>, <rasa.shared.core.events.ActionExecuted object at 0x7f56f8280370>]'.
+2021-03-06 16:50:29 DEBUG    rasa.core.processor  - Current slot values: 
+	express: None
+	ord_no: None
+2021-03-06 16:50:29 DEBUG    rasa.core.processor  - Received user message '查詢三大快遞貨件的結果' with intent '{'name': 'search_express', 'confidence': 0.4737565430616372}' and entities '[]'
+2021-03-06 16:50:29 DEBUG    rasa.core.processor  - Logged UserUtterance - tracker now has 4 events.
+2021-03-06 16:50:29 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'search_express'}, 'prev_action': {'action_name': 'action_listen'}}]
+2021-03-06 16:50:29 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2021-03-06 16:50:29 DEBUG    rasa.core.policies.fallback  - NLU confidence threshold met, confidence of fallback action set to core threshold (0.3).
+2021-03-06 16:50:29 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_0_TEDPolicy
+2021-03-06 16:50:29 DEBUG    rasa.core.processor  - Predicted next action 'utter_search_express' with confidence 0.99.
+2021-03-06 16:50:29 DEBUG    rasa.core.processor  - Action 'utter_search_express' ended with events '[BotUttered('若您要查詢DHL、FedEx、UPS三大國際快遞進/出貨資料,請先選擇要查詢的貨物是透過哪家快遞公司遞送?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"template_name": "utter_search_express"}, 1615020629.8127093)]'.
+2021-03-06 16:50:29 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'search_express'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'search_express'}, 'prev_action': {'action_name': 'utter_search_express'}}]
+2021-03-06 16:50:29 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2021-03-06 16:50:29 DEBUG    rasa.core.policies.fallback  - NLU confidence threshold met, confidence of fallback action set to core threshold (0.3).
+2021-03-06 16:50:29 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_0_TEDPolicy
+2021-03-06 16:50:29 DEBUG    rasa.core.processor  - Predicted next action 'action_listen' with confidence 1.00.
+2021-03-06 16:50:29 DEBUG    rasa.core.processor  - Action 'action_listen' ended with events '[]'.
+2021-03-06 16:50:29 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2021-03-06 16:50:29 DEBUG    rasa.core.lock_store  - Deleted lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+若您要查詢DHL、FedEx、UPS三大國際快遞進/出貨資料,請先選擇要查詢的貨物是透過哪家快遞公司遞送?
+[6n[?2004h[?25l[0m[?7l[0m[J[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134m                                                                [79C [15C[?7h[0m[?12l[?25h[?25l[?7l[15D[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134m [0m[K[0m
+[0;38;5;134m                                                                               [79C [A[15C[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134m查詢三大快遞貨件的結果 [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[2D[?7h[0m[?12l[?25h[?25l[?7l[2D[?7h[0m[?12l[?25h[?25l[?7l[2D[?7h[0m[?12l[?25h[?25l[?7l[2C[?7h[0m[?12l[?25h[?25l[?7l[2D[0;38;5;134m結果 [0m[K[5D[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[2D[0;38;5;134m結果 [0m[K[5D[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[2D[0;38;5;134m結果 [0m[K[5D[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[27D[0m[J[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134m查詢三大快遞結果                                                [79C [0m
+[J[?7h[0m[?12l[?25h[?2004l2021-03-06 16:50:41 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:50:41 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:50:41 DEBUG    rasa.core.lock_store  - Acquired lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:50:41 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2021-03-06 16:50:41 DEBUG    rasa.core.processor  - Starting a new session for conversation ID '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:50:41 DEBUG    rasa.core.processor  - Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x7f56f81ceee0>, <rasa.shared.core.events.ActionExecuted object at 0x7f56f81d2af0>]'.
+2021-03-06 16:50:41 DEBUG    rasa.core.processor  - Current slot values: 
+	express: None
+	ord_no: None
+2021-03-06 16:50:41 DEBUG    rasa.core.processor  - Received user message '查詢三大快遞結果' with intent '{'name': 'search_express', 'confidence': 0.4472722012612722}' and entities '[]'
+2021-03-06 16:50:41 DEBUG    rasa.core.processor  - Logged UserUtterance - tracker now has 4 events.
+2021-03-06 16:50:41 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'search_express'}, 'prev_action': {'action_name': 'action_listen'}}]
+2021-03-06 16:50:41 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2021-03-06 16:50:41 DEBUG    rasa.core.policies.fallback  - NLU confidence threshold met, confidence of fallback action set to core threshold (0.3).
+2021-03-06 16:50:41 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_0_TEDPolicy
+2021-03-06 16:50:41 DEBUG    rasa.core.processor  - Predicted next action 'utter_search_express' with confidence 0.99.
+2021-03-06 16:50:41 DEBUG    rasa.core.processor  - Action 'utter_search_express' ended with events '[BotUttered('若您要查詢DHL、FedEx、UPS三大國際快遞進/出貨資料,請先選擇要查詢的貨物是透過哪家快遞公司遞送?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"template_name": "utter_search_express"}, 1615020641.8406012)]'.
+2021-03-06 16:50:41 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'search_express'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'search_express'}, 'prev_action': {'action_name': 'utter_search_express'}}]
+2021-03-06 16:50:41 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2021-03-06 16:50:41 DEBUG    rasa.core.policies.fallback  - NLU confidence threshold met, confidence of fallback action set to core threshold (0.3).
+2021-03-06 16:50:41 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_0_TEDPolicy
+2021-03-06 16:50:41 DEBUG    rasa.core.processor  - Predicted next action 'action_listen' with confidence 1.00.
+2021-03-06 16:50:41 DEBUG    rasa.core.processor  - Action 'action_listen' ended with events '[]'.
+2021-03-06 16:50:41 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2021-03-06 16:50:41 DEBUG    rasa.core.lock_store  - Deleted lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+若您要查詢DHL、FedEx、UPS三大國際快遞進/出貨資料,請先選擇要查詢的貨物是透過哪家快遞公司遞送?
+[6n[?2004h[?25l[0m[?7l[0m[J[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134m                                                                [79C [15C[?7h[0m[?12l[?25h[?25l[?7l[15D[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134m [0m[K[0m
+[0;38;5;134m                                                                               [79C [A[15C[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134mr [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134m [0m[K[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134m妳好 [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[19D[0m[J[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134m妳好                                                            [79C [0m
+[J[?7h[0m[?12l[?25h[?2004l2021-03-06 16:52:38 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:52:38 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:52:38 DEBUG    rasa.core.lock_store  - Acquired lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:52:38 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2021-03-06 16:52:38 DEBUG    rasa.core.processor  - Starting a new session for conversation ID '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:52:38 DEBUG    rasa.core.processor  - Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x7f56f8128850>, <rasa.shared.core.events.ActionExecuted object at 0x7f56f8135310>]'.
+2021-03-06 16:52:38 DEBUG    rasa.core.processor  - Current slot values: 
+	express: None
+	ord_no: None
+2021-03-06 16:52:38 DEBUG    rasa.core.processor  - Received user message '妳好' with intent '{'name': 'greet', 'confidence': 0.7114290481278001}' and entities '[]'
+2021-03-06 16:52:38 DEBUG    rasa.core.processor  - Logged UserUtterance - tracker now has 4 events.
+2021-03-06 16:52:38 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'action_listen'}}]
+2021-03-06 16:52:38 DEBUG    rasa.core.policies.memoization  - There is a memorised next action 'utter_greet'
+2021-03-06 16:52:38 DEBUG    rasa.core.policies.fallback  - NLU confidence threshold met, confidence of fallback action set to core threshold (0.3).
+2021-03-06 16:52:38 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_1_MemoizationPolicy
+2021-03-06 16:52:38 DEBUG    rasa.core.processor  - Predicted next action 'utter_greet' with confidence 1.00.
+2021-03-06 16:52:38 DEBUG    rasa.core.processor  - Action 'utter_greet' ended with events '[BotUttered('您好～', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"template_name": "utter_greet"}, 1615020758.9458234)]'.
+2021-03-06 16:52:38 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_greet'}}]
+2021-03-06 16:52:38 DEBUG    rasa.core.policies.memoization  - There is a memorised next action 'action_listen'
+2021-03-06 16:52:38 DEBUG    rasa.core.policies.fallback  - NLU confidence threshold met, confidence of fallback action set to core threshold (0.3).
+2021-03-06 16:52:38 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_1_MemoizationPolicy
+2021-03-06 16:52:38 DEBUG    rasa.core.processor  - Predicted next action 'action_listen' with confidence 1.00.
+2021-03-06 16:52:38 DEBUG    rasa.core.processor  - Action 'action_listen' ended with events '[]'.
+2021-03-06 16:52:38 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2021-03-06 16:52:38 DEBUG    rasa.core.lock_store  - Deleted lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+您好～
+[6n[?2004h[?25l[0m[?7l[0m[J[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134m                                                                [79C [15C[?7h[0m[?12l[?25h[?25l[?7l[15D[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134m [0m[K[0m
+[0;38;5;134m                                                                               [79C [A[15C[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134m三大塊地 [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[2D[0;38;5;134m [0m[K[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[2D[0;38;5;134m [0m[K[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[2D[0;38;5;134m [0m[K[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[2D[0;38;5;134m [0m[K[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134m查獲 [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[2D[0;38;5;134m [0m[K[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134m貨品 [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[2D[0;38;5;134m [0m[K[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[19D[0m[J[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134m查貨                                                            [79C [0m
+[J[?7h[0m[?12l[?25h[?2004l2021-03-06 16:52:47 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:52:47 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:52:47 DEBUG    rasa.core.lock_store  - Acquired lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:52:47 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2021-03-06 16:52:47 DEBUG    rasa.core.processor  - Starting a new session for conversation ID '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:52:47 DEBUG    rasa.core.processor  - Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x7f56c57eefa0>, <rasa.shared.core.events.ActionExecuted object at 0x7f56c57eef10>]'.
+2021-03-06 16:52:47 DEBUG    rasa.core.processor  - Current slot values: 
+	express: None
+	ord_no: None
+2021-03-06 16:52:47 DEBUG    rasa.core.processor  - Received user message '查貨' with intent '{'name': 'search_package_date', 'confidence': 0.36126395565143843}' and entities '[]'
+2021-03-06 16:52:47 DEBUG    rasa.core.processor  - Logged UserUtterance - tracker now has 4 events.
+2021-03-06 16:52:47 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'search_package_date'}, 'prev_action': {'action_name': 'action_listen'}}]
+2021-03-06 16:52:47 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2021-03-06 16:52:47 DEBUG    rasa.core.policies.fallback  - The difference in NLU confidences for the top two intents (0.03456513296894681) is lower than the ambiguity threshold 0.10. 
+2021-03-06 16:52:47 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_2_FallbackPolicy
+2021-03-06 16:52:47 DEBUG    rasa.core.processor  - Predicted next action 'action_donknow' with confidence 1.00.
+2021-03-06 16:52:47 DEBUG    rasa.core.actions.action  - Calling action endpoint to run action 'action_donknow'.
+2021-03-06 16:52:47 DEBUG    rasa.core.processor  - Action 'action_donknow' ended with events '[BotUttered('我沒有理解您說的話，我的理解力還需要更多的提升。', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"template_name": "utter_donknow"}, 1615020767.9230554), BotUttered('您可以向我提問：   
+如何查詢與出貨運輸狀況相關問題？  
+ 如何查詢與出貨資料查詢相關問題？  
+ 查詢三大快遞貨件的結果。', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1615020767.9230657)]'.
+2021-03-06 16:52:47 DEBUG    rasa.core.processor  - Current slot values: 
+	express: None
+	ord_no: None
+2021-03-06 16:52:47 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'search_package_date'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'search_package_date'}, 'prev_action': {'action_name': 'action_donknow'}}]
+2021-03-06 16:52:47 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2021-03-06 16:52:47 DEBUG    rasa.core.policies.fallback  - Predicted 'action_listen' after fallback action 'action_donknow'
+2021-03-06 16:52:47 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_2_FallbackPolicy
+2021-03-06 16:52:47 DEBUG    rasa.core.processor  - Predicted next action 'action_listen' with confidence 1.00.
+2021-03-06 16:52:47 DEBUG    rasa.core.processor  - Action 'action_listen' ended with events '[]'.
+2021-03-06 16:52:47 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2021-03-06 16:52:47 DEBUG    rasa.core.lock_store  - Deleted lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+我沒有理解您說的話，我的理解力還需要更多的提升。
+您可以向我提問：   
+如何查詢與出貨運輸狀況相關問題？  
+ 如何查詢與出貨資料查詢相關問題？  
+ 查詢三大快遞貨件的結果。
+[6n[?2004h[?25l[0m[?7l[0m[J[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134m                                                                [79C [15C[?7h[0m[?12l[?25h[?25l[?7l[15D[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134m [0m[K[0m
+[0;38;5;134m                                                                               [79C [A[15C[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134m出貨運輸狀況 [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[27D[0m[J[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134m出貨運輸狀況                                                    [79C [0m
+[J[?7h[0m[?12l[?25h[?2004l2021-03-06 16:52:55 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:52:55 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:52:55 DEBUG    rasa.core.lock_store  - Acquired lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:52:55 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2021-03-06 16:52:55 DEBUG    rasa.core.processor  - Starting a new session for conversation ID '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:52:55 DEBUG    rasa.core.processor  - Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x7f56c7f9e520>, <rasa.shared.core.events.ActionExecuted object at 0x7f56c7f9e8b0>]'.
+2021-03-06 16:52:55 DEBUG    rasa.core.processor  - Current slot values: 
+	express: None
+	ord_no: None
+2021-03-06 16:52:55 DEBUG    rasa.core.processor  - Received user message '出貨運輸狀況' with intent '{'name': 'search_package_date', 'confidence': 0.35075519378421444}' and entities '[]'
+2021-03-06 16:52:55 DEBUG    rasa.core.processor  - Logged UserUtterance - tracker now has 4 events.
+2021-03-06 16:52:55 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'search_package_date'}, 'prev_action': {'action_name': 'action_listen'}}]
+2021-03-06 16:52:55 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2021-03-06 16:52:55 DEBUG    rasa.core.policies.fallback  - The difference in NLU confidences for the top two intents (0.05646521143763045) is lower than the ambiguity threshold 0.10. 
+2021-03-06 16:52:55 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_2_FallbackPolicy
+2021-03-06 16:52:55 DEBUG    rasa.core.processor  - Predicted next action 'action_donknow' with confidence 1.00.
+2021-03-06 16:52:55 DEBUG    rasa.core.actions.action  - Calling action endpoint to run action 'action_donknow'.
+2021-03-06 16:52:55 DEBUG    rasa.core.processor  - Action 'action_donknow' ended with events '[BotUttered('我沒有理解您說的話，我的理解力還需要更多的提升。', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"template_name": "utter_donknow"}, 1615020775.3616753), BotUttered('您可以向我提問：   
+如何查詢與出貨運輸狀況相關問題？  
+ 如何查詢與出貨資料查詢相關問題？  
+ 查詢三大快遞貨件的結果。', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1615020775.3616858)]'.
+2021-03-06 16:52:55 DEBUG    rasa.core.processor  - Current slot values: 
+	express: None
+	ord_no: None
+2021-03-06 16:52:55 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'search_package_date'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'search_package_date'}, 'prev_action': {'action_name': 'action_donknow'}}]
+2021-03-06 16:52:55 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2021-03-06 16:52:55 DEBUG    rasa.core.policies.fallback  - Predicted 'action_listen' after fallback action 'action_donknow'
+2021-03-06 16:52:55 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_2_FallbackPolicy
+2021-03-06 16:52:55 DEBUG    rasa.core.processor  - Predicted next action 'action_listen' with confidence 1.00.
+2021-03-06 16:52:55 DEBUG    rasa.core.processor  - Action 'action_listen' ended with events '[]'.
+2021-03-06 16:52:55 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2021-03-06 16:52:55 DEBUG    rasa.core.lock_store  - Deleted lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+我沒有理解您說的話，我的理解力還需要更多的提升。
+您可以向我提問：   
+如何查詢與出貨運輸狀況相關問題？  
+ 如何查詢與出貨資料查詢相關問題？  
+ 查詢三大快遞貨件的結果。
+[6n[?2004h[?25l[0m[?7l[0m[J[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134m                                                                [79C [15C[?7h[0m[?12l[?25h[?25l[?7l[15D[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134m [0m[K[0m
+[0;38;5;134m                                                                               [79C [A[15C[?7h[0m[?12l[?25h[?25l[?7l[0;38;5;134m出貨資料 [?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[23D[0m[J[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134m出貨資料                                                        [79C [0m
+[J[?7h[0m[?12l[?25h[?2004l2021-03-06 16:53:34 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:53:34 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:53:34 DEBUG    rasa.core.lock_store  - Acquired lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:53:34 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2021-03-06 16:53:34 DEBUG    rasa.core.processor  - Starting a new session for conversation ID '3787cbe87e7d49ec9c7c8ae07c305e07'.
+2021-03-06 16:53:34 DEBUG    rasa.core.processor  - Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x7f56c7e84c10>, <rasa.shared.core.events.ActionExecuted object at 0x7f56c7e9ea90>]'.
+2021-03-06 16:53:34 DEBUG    rasa.core.processor  - Current slot values: 
+	express: None
+	ord_no: None
+2021-03-06 16:53:34 DEBUG    rasa.core.processor  - Received user message '出貨資料' with intent '{'name': 'search_package_date', 'confidence': 0.3399398319408172}' and entities '[]'
+2021-03-06 16:53:34 DEBUG    rasa.core.processor  - Logged UserUtterance - tracker now has 4 events.
+2021-03-06 16:53:34 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'search_package_date'}, 'prev_action': {'action_name': 'action_listen'}}]
+2021-03-06 16:53:35 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2021-03-06 16:53:35 DEBUG    rasa.core.policies.fallback  - The difference in NLU confidences for the top two intents (0.07454162050636354) is lower than the ambiguity threshold 0.10. 
+2021-03-06 16:53:35 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_2_FallbackPolicy
+2021-03-06 16:53:35 DEBUG    rasa.core.processor  - Predicted next action 'action_donknow' with confidence 1.00.
+2021-03-06 16:53:35 DEBUG    rasa.core.actions.action  - Calling action endpoint to run action 'action_donknow'.
+2021-03-06 16:53:35 DEBUG    rasa.core.processor  - Action 'action_donknow' ended with events '[BotUttered('我沒有理解您說的話，我的理解力還需要更多的提升。', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"template_name": "utter_donknow"}, 1615020815.0112836), BotUttered('您可以向我提問：   
+如何查詢與出貨運輸狀況相關問題？  
+ 如何查詢與出貨資料查詢相關問題？  
+ 查詢三大快遞貨件的結果。', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1615020815.0112936)]'.
+2021-03-06 16:53:35 DEBUG    rasa.core.processor  - Current slot values: 
+	express: None
+	ord_no: None
+2021-03-06 16:53:35 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'search_package_date'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'search_package_date'}, 'prev_action': {'action_name': 'action_donknow'}}]
+2021-03-06 16:53:35 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2021-03-06 16:53:35 DEBUG    rasa.core.policies.fallback  - Predicted 'action_listen' after fallback action 'action_donknow'
+2021-03-06 16:53:35 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_2_FallbackPolicy
+2021-03-06 16:53:35 DEBUG    rasa.core.processor  - Predicted next action 'action_listen' with confidence 1.00.
+2021-03-06 16:53:35 DEBUG    rasa.core.processor  - Action 'action_listen' ended with events '[]'.
+2021-03-06 16:53:35 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2021-03-06 16:53:35 DEBUG    rasa.core.lock_store  - Deleted lock for conversation '3787cbe87e7d49ec9c7c8ae07c305e07'.
+我沒有理解您說的話，我的理解力還需要更多的提升。
+您可以向我提問：   
+如何查詢與出貨運輸狀況相關問題？  
+ 如何查詢與出貨資料查詢相關問題？  
+ 查詢三大快遞貨件的結果。
+[6n[?2004h[?25l[0m[?7l[0m[J[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134m                                                                [79C [15C[?7h[0m[?12l[?25h[?25l[?7l[15D[0;38;5;134mYour input ->[0;38;5;134;1m  [0;38;5;134m [0m[K[0m
+[0;38;5;134m                                                                               [79C [A[15C[?7h[0m[?12l[?25h

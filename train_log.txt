@@ -1,0 +1,62 @@
+2021-03-06 16:46:48 DEBUG    rasa.shared.nlu.training_data.loading  - Training data format of 'data/data_nlu.json' is 'rasa_nlu'.
+2021-03-06 16:46:48 DEBUG    rasa.shared.nlu.training_data.loading  - Training data format of 'data/stories.md' is 'unk'.
+2021-03-06 16:46:48 DEBUG    rasa.shared.nlu.training_data.loading  - Training data format of '/home/yx/rasa_test/data/data_nlu.json' is 'rasa_nlu'.
+2021-03-06 16:46:48 DEBUG    rasa.shared.importers.importer  - Added 10 training data examples from the story training data.
+2021-03-06 16:46:48 DEBUG    rasa.shared.nlu.training_data.loading  - Training data format of '/home/yx/rasa_test/data/data_nlu.json' is 'rasa_nlu'.
+2021-03-06 16:46:48 DEBUG    rasa.model  - Extracted model to '/tmp/tmpze303l70'.
+2021-03-06 16:46:48 INFO     rasa.model  - Data (messages) for NLU model section changed.
+Training NLU model...
+2021-03-06 16:46:55 INFO     rasa.nlu.components  - Added 'MitieNLP' to component cache. Key 'MitieNLP-/home/yx/rasa_test/data/total_word_feature_extractor_zh.dat'.
+2021-03-06 16:46:55 INFO     rasa.nlu.tokenizers.jieba_tokenizer  - Loading Jieba User Dictionary at jieba_userdict/ord_no_dic.txt
+Building prefix dict from the default dictionary ...
+2021-03-06 16:46:55 DEBUG    jieba  - Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+2021-03-06 16:46:55 DEBUG    jieba  - Loading model from cache /tmp/jieba.cache
+Loading model cost 1.013 seconds.
+2021-03-06 16:46:56 DEBUG    jieba  - Loading model cost 1.013 seconds.
+Prefix dict has been built successfully.
+2021-03-06 16:46:56 DEBUG    jieba  - Prefix dict has been built successfully.
+2021-03-06 16:46:56 INFO     rasa.nlu.tokenizers.jieba_tokenizer  - Loading Jieba User Dictionary at jieba_userdict/express_dic.txt
+2021-03-06 16:46:57 DEBUG    rasa.shared.importers.importer  - Added 10 training data examples from the story training data.
+2021-03-06 16:46:57 DEBUG    rasa.shared.nlu.training_data.loading  - Training data format of '/home/yx/rasa_test/data/data_nlu.json' is 'rasa_nlu'.
+2021-03-06 16:46:57 INFO     rasa.shared.nlu.training_data.training_data  - Training data stats:
+2021-03-06 16:46:57 INFO     rasa.shared.nlu.training_data.training_data  - Number of intent examples: 16 (5 distinct intents)
+
+2021-03-06 16:46:57 DEBUG    rasa.shared.nlu.training_data.training_data  - intent: None, training examples: 16   
+intent: greet, training examples: 5   
+intent: search_package_date, training examples: 4   
+intent: search_express, training examples: 4   
+intent: check_express, training examples: 4   
+intent: enter_order_number, training examples: 4   
+2021-03-06 16:46:57 INFO     rasa.shared.nlu.training_data.training_data  -   Found intents: 'search_express', 'search_package_date', 'enter_order_number', 'check_express', 'greet'
+2021-03-06 16:46:57 INFO     rasa.shared.nlu.training_data.training_data  - Number of response examples: 0 (0 distinct responses)
+2021-03-06 16:46:57 INFO     rasa.shared.nlu.training_data.training_data  - Number of entity examples: 6 (2 distinct entities)
+2021-03-06 16:46:57 INFO     rasa.shared.nlu.training_data.training_data  -   Found entity types: 'express', 'ord_no'
+2021-03-06 16:46:57 DEBUG    rasa.shared.nlu.training_data.training_data  - Validating training data...
+2021-03-06 16:46:57 INFO     rasa.nlu.model  - Starting to train component MitieNLP
+2021-03-06 16:46:57 INFO     rasa.nlu.model  - Finished training component.
+2021-03-06 16:46:57 INFO     rasa.nlu.model  - Starting to train component JiebaTokenizer
+2021-03-06 16:46:57 INFO     rasa.nlu.model  - Finished training component.
+2021-03-06 16:46:57 INFO     rasa.nlu.model  - Starting to train component MitieEntityExtractor
+2021-03-06 16:47:01 INFO     rasa.nlu.model  - Finished training component.
+2021-03-06 16:47:02 INFO     rasa.nlu.model  - Starting to train component RegexEntityExtractor
+2021-03-06 16:47:02 INFO     rasa.nlu.model  - Finished training component.
+2021-03-06 16:47:02 INFO     rasa.nlu.model  - Starting to train component EntitySynonymMapper
+2021-03-06 16:47:02 INFO     rasa.nlu.model  - Finished training component.
+2021-03-06 16:47:02 INFO     rasa.nlu.model  - Starting to train component CRFEntityExtractor
+2021-03-06 16:47:02 DEBUG    rasa.nlu.extractors.crf_entity_extractor  - Training CRF for 'entity'.
+2021-03-06 16:47:02 DEBUG    rasa.nlu.extractors.crf_entity_extractor  - Training finished.
+2021-03-06 16:47:02 INFO     rasa.nlu.model  - Finished training component.
+2021-03-06 16:47:02 INFO     rasa.nlu.model  - Starting to train component RegexFeaturizer
+2021-03-06 16:47:02 INFO     rasa.nlu.model  - Finished training component.
+2021-03-06 16:47:02 INFO     rasa.nlu.model  - Starting to train component MitieFeaturizer
+2021-03-06 16:47:02 INFO     rasa.nlu.model  - Finished training component.
+2021-03-06 16:47:02 INFO     rasa.nlu.model  - Starting to train component SklearnIntentClassifier
+Fitting 2 folds for each of 6 candidates, totalling 12 fits
+[Parallel(n_jobs=5)]: Using backend LokyBackend with 5 concurrent workers.
+[Parallel(n_jobs=5)]: Done  12 out of  12 | elapsed:    1.9s finished
+2021-03-06 16:47:03 INFO     rasa.nlu.model  - Finished training component.
+2021-03-06 16:47:04 INFO     rasa.nlu.model  - Successfully saved model into '/tmp/tmpoqh7lzlq/nlu'
+NLU model training completed.
+Core stories/configuration did not change. No need to retrain Core model.
+Your Rasa model is trained and saved at '/home/yx/rasa_test/models/20210306-164705.tar.gz'.

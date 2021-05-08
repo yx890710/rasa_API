@@ -4,8 +4,8 @@ import json
 
 
 
-url = "http://163.18.26.234:8000/rasa_nlu_train"
-#url = "http://163.18.26.234:8000/rasa_chat"
+url = "url:port/rasa_nlu_train"
+#url = "url:port/rasa_chat"
 configs = "./config.yml"
 training_files = "./data/"
 domain = "./domain.yml"

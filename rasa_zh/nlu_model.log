@@ -1,0 +1,33 @@
+INFO:rasa_nlu.training_data.loading:Training data format of data/data_nlu.json is rasa_nlu
+DEBUG:rasa_nlu.training_data.training_data:Validating training data...
+INFO:rasa_nlu.training_data.training_data:Training data stats: 
+	- intent examples: 12 (6 distinct intents)
+	- Found intents: 'tracking_search_condition', 'data_search', 'info_search', 'greet', 'tracking_search', 'condition_search'
+	- entity examples: 7 (3 distinct entities)
+	- found entities: 'tracking_condition', 'search_btn', 'info_search_num'
+
+INFO:rasa_nlu.training_data.loading:Training data format of ./data/data_nlu.json is rasa_nlu
+DEBUG:rasa_nlu.training_data.training_data:Validating training data...
+INFO:rasa_nlu.training_data.training_data:Training data stats: 
+	- intent examples: 12 (6 distinct intents)
+	- Found intents: 'tracking_search', 'info_search', 'tracking_search_condition', 'data_search', 'condition_search', 'greet'
+	- entity examples: 7 (3 distinct entities)
+	- found entities: 'info_search_num', 'tracking_condition', 'search_btn'
+
+INFO:rasa_nlu.training_data.loading:Training data format of ./data/data_nlu.json is rasa_nlu
+DEBUG:rasa_nlu.training_data.training_data:Validating training data...
+INFO:rasa_nlu.training_data.training_data:Training data stats: 
+	- intent examples: 12 (6 distinct intents)
+	- Found intents: 'info_search', 'greet', 'tracking_search_condition', 'data_search', 'condition_search', 'tracking_search'
+	- entity examples: 7 (3 distinct entities)
+	- found entities: 'search_btn', 'info_search_num', 'tracking_condition'
+
+INFO:rasa_nlu.training_data.loading:Training data format of ./data/data_nlu.json is rasa_nlu
+DEBUG:rasa_nlu.training_data.training_data:Validating training data...
+INFO:rasa_nlu.training_data.training_data:Training data stats: 
+	- intent examples: 12 (6 distinct intents)
+	- Found intents: 'data_search', 'info_search', 'condition_search', 'tracking_search', 'tracking_search_condition', 'greet'
+	- entity examples: 7 (3 distinct entities)
+	- found entities: 'tracking_condition', 'search_btn', 'info_search_num'
+
+DEBUG:tensorflow:Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.

@@ -1,0 +1,109 @@
+{
+    "rasa_nlu_data": {
+        "common_examples": [
+            {
+                "text": "hi",
+                "intent": "greet",
+                "entities": []
+            },
+            {
+                "text": "hello",
+                "intent": "greet",
+                "entities": []
+            },
+            {
+                "text": "How to inquire about issues related to shipment and transportation status?",
+                "intent": "出貨運輸狀況",
+                "entities": []
+            },
+            {
+                "text": "Provide relevant information from PL to ASE.",
+                "intent": "出貨運輸狀況",
+                "entities": [
+                    {
+                        "end": 36,
+                        "entity": "Tracking",
+                        "start": 34,
+                        "value": "PL",
+                        "extractor": "DIETClassifier"
+                    },
+                    {
+                        "end": 43,
+                        "entity": "Site",
+                        "start": 40,
+                        "value": "ASE",
+                        "extractor": "DIETClassifier"
+                    }
+                ]
+            },
+            {
+                "text": "Advanced query",
+                "intent": "出貨文件獲取",
+                "entities": []
+            },
+            {
+                "text": "Query the results of the three major express shipments.",
+                "intent": "三大快遞貨件查詢",
+                "entities": []
+            },
+            {
+                "text": "I want to know about DHL express",
+                "intent": "三大快遞貨件查詢",
+                "entities": [
+                    {
+                        "end": 24,
+                        "entity": "Express",
+                        "start": 21,
+                        "value": "DHL"
+                    }
+                ]
+            },
+            {
+                "text": "DHL Inquiry",
+                "intent": "DHL查單",
+                "entities": []
+            },
+            {
+                "text": "FedEx Inquiry",
+                "intent": "FedEx查單",
+                "entities": []
+            },
+            {
+                "text": "UPS Inquiry",
+                "intent": "UPS查單",
+                "entities": []
+            },
+            {
+                "text": "I want to understand state of goods relevant information",
+                "intent": "訂貨相關問題",
+                "entities": [
+                    {
+                        "end": 35,
+                        "entity": "Shipment",
+                        "start": 21,
+                        "value": "state of goods"
+                    }
+                ]
+            }
+        ],
+        "regex_features": [],
+        "lookup_tables": [
+            {
+                "name": "Shipment",
+                "elements": "data/lookup_zh/Shipment.txt"
+            },
+            {
+                "name": "Site",
+                "elements": "data/lookup_zh/Site.txt"
+            },
+            {
+                "name": "Tracking",
+                "elements": "data/lookup_zh/Tracking.txt"
+            },
+            {
+                "name": "Express",
+                "elements": "data/lookup_zh/Express.txt"
+            }
+        ]
+    }
+}

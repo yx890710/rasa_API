@@ -1,0 +1,19 @@
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: en
+
+pipeline:
+  - name: WhitespaceTokenizer
+  - name: RegexFeaturizer
+  - name: RegexEntityExtractor
+    use_lookup_tables: True
+    use_word_boundaries: False
+  - name: DIETClassifier
+    epochs: 400
+  - name: EntitySynonymMapper
+# This key can be left empty. The pipeline will then be provided from a default configuration during training.
+
+# Configuration for Rasa Core.
+# https://rasa.com/docs/rasa/core/policies/
+policies:
+# This key can be left empty. Policies will then be provided from a default configuration during training.

@@ -1,0 +1,35 @@
+version: "2.0"
+
+slots:
+  Shipment:
+    type: text
+  Express:
+    type: text
+  Tracking:
+    type: text
+  Site:
+    type: text
+
+intents:
+  - greet
+  - 出貨運輸狀況
+  - 出貨文件獲取
+  - 三大快遞貨件查詢
+  - DHL查單
+  - FedEx查單
+  - UPS查單
+  - 訂貨相關問題
+
+entities:
+  - Shipment
+  - Express
+  - Tracking
+  - Site
+
+
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

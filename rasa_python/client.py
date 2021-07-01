@@ -4,19 +4,21 @@ import json
 
 
 
-url = "url:port/rasa_nlu_train"
-#url = "url:port/rasa_chat"
-configs = "./config.yml"
-training_files = "./data/"
-domain = "./domain.yml"
-output = "./models/nlu/"
-message="我想查詢DN資料"
-Context_json = json.dumps({"config_dir": configs,"dataset": training_files,"model_dir": output})
-#Context_json = json.dumps({"message": message})
+#url = "http://IP:PORT/rasa_nlu_train"
+url = "http://IP:PORT/rasa_chat"
+#url = "http://IP:PORT/db_to_rasa_data"
+#url = "http://IP:PORT/model_change"
+#url = "http://IP:PORT/version_check"
+
+version="20210628"
+#message="提供簽收單至福雷的相關資訊。"
+message=["提供簽收單至福雷的相關資訊。","Provide relevant information from PL to ASE."]
+#Context_json = json.dumps({"version":version})
+Context_json = json.dumps({"message": message})
+#result = requests.post(url)
+#Context_json = json.dumps({"b":1000})
 result = requests.post(url, data=Context_json)
 tt=result.json()
 print(tt)
 
-#print(tt["entities"][0]["confidence_entity"])
 
-#print(result.text["entities"][0]["confidence_entity"])

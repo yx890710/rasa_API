@@ -4,6 +4,7 @@ import requests
 import json
 import rasa
 import logging
+import yaml
 from rasa.cli.scaffold import create_initial_project
 from rasa.train import train_nlu
 from rasa.model import get_latest_model #rasa可以自動偵測最新模型
@@ -11,7 +12,19 @@ import asyncio  #用到了非同步
 from rasa.utils.endpoints import EndpointConfig  #從rasa呼叫EndpointConfig
 from rasa.core.agent import Agent  #從rasa呼叫Agent
 import os
+from data_to_rasa import *
 app = Flask(__name__)
+
+
+#==Agent建置==
+projects=["./rasa_zh/models/v20210628/","./rasa_en/models/v20210628/"]
+zh_nlu_model=get_latest_model(projects[0])
+en_nlu_model=get_latest_model(projects[1])
+zh_agent = Agent.load(zh_nlu_model,action_endpoint=None)
+en_agent = Agent.load(en_nlu_model,action_endpoint=None)
+#==Agent建置==
+
+
 
 
 #因為用到了非同步等騷操作，這裡使用await將rasa返回的對話取出來
@@ -28,43 +41,141 @@ def nlu_chatbot(agent,message):
     result = loop.run_until_complete(chatbot(agent,message))
     return result
 
+#========以上部分為對話func部分=====================================================
 
-
-
-@app.route('/rasa_nlu_train',methods=["POST"])
-def rasa_nlu_train():
-    os.chdir("rasa_en")
+# 靜態文件轉換API
+@app.route('/db_to_rasa_data',methods=["POST"])
+def db_to_rasa_data():
+    #request data
     data=bytes.decode(request.data)
     data_dict = json.loads(data)
-    config_dir=data_dict['config_dir']
-    dataset=data_dict['dataset']
-    model_dir=data_dict['model_dir']
-    model_path=train_nlu(config=config_dir,nlu_data=dataset,output=model_dir)
-    """
-    try:
-        model_path=train_nlu(config=config_dir,nlu_data=dataset,output=model_dir)
-        result={"train_nlu":"success","model_dir":model_path}
-    except:
-        result={"train_nlu":"failed"}
-    """
-    result={"train_nlu":"success","model_dir":model_path}
+    v=data_dict["version"]
+    #建立中英文資料夾
+    zh_mkdir_rasa(v)
+    en_mkdir_rasa(v)
+    r1=zh_process(v)
+    r2=en_process(v)
+
+    result_json=json.dumps({"result_zh":r1,"rasa_en":r2})
+    return result_json
+
+
+# 訓練API
+@app.route('/rasa_nlu_train',methods=["POST"])
+def rasa_nlu_train():
+    projects=["rasa_zh","rasa_en"]
+    model_path=[]
+    data=bytes.decode(request.data)
+    data_dict = json.loads(data)
+    v=data_dict["version"]
+    config_dir = "./config.yml"
+    dataset = "./data_{}/".format(v)
+    model_dir = "./models/v{}".format(v)
+    #config 修改
+    config_name="./rasa_zh/config"
+    with open(config_name+'.yml','r') as ttfile:
+        data_loaded = yaml.safe_load(ttfile)
+
+    data_loaded["pipeline"][0]["dictionary_path"]=dataset+"jieba_userdict" #修改位置
+    #直接覆寫檔案
+    with open(config_name+'.yml', 'w') as f:
+        yaml.dump(data_loaded, f, Dumper=yaml.CDumper)
+    #訓練模型
+    status=[]
+    for i in range(len(projects)):
+        print("tt")
+        print(projects[i])
+        os.chdir(projects[i])
+        #取得現在位置
+        try:
+            train_nlu(config=config_dir,nlu_data=dataset,output=model_dir)
+            status.append("success")
+        except:
+            status.append("failed")
+        os.chdir('..')
+    result={"rasa_zh":status[0],"rasa_en":status[1]}
     result_json=json.dumps(result)
     return result_json
 
 
+# 對話API
 @app.route('/rasa_chat',methods=["POST"])
 def rasa_chat():
+    global zh_agent
+    global en_agent
     result=[]
-    projects=["./rasa_zh/models/zh/","./rasa_en/models/en/"]
     data=bytes.decode(request.data)
     data_dict = json.loads(data)
     message=data_dict["message"]
-    for i in range(len(projects)):
-        nlu_model=get_latest_model(projects[i])
-        agent = Agent.load(nlu_model,action_endpoint=None)
-        result.append(nlu_chatbot(agent,message[i]))
-    result_json=json.dumps({"result_zh":result[0],"rasa_en":result[1]})
+    result={"rasa_zh":"","rasa_en":""}
+    try:
+        zhresult=nlu_chatbot(zh_agent,message[0])
+        result["rasa_zh"]=zhresult
+    except:
+        result["rasa_zh"]="failed"
+    try:
+        enresult=nlu_chatbot(en_agent,message[1])
+        result["rasa_en"]=enresult
+    except:
+        result["rasa_en"]="failed"
+    result_json=json.dumps(result)
     return result_json
+
+
+# 模型更換API
+@app.route('/model_change',methods=["POST"])
+def model_change():
+    global zh_agent
+    global en_agent
+    data=bytes.decode(request.data)
+    data_dict = json.loads(data)
+    v=data_dict["version"]
+    model_list=["./rasa_zh/models/v{}/".format(v),"./rasa_en/models/v{}/".format(v)]
+    result={"rasa_zh":"","rasa_en":""}
+    try:
+        zh_agent = Agent.load(get_latest_model(model_list[0]),action_endpoint=None)
+        result["rasa_zh"]="success"
+    except:
+        result["rasa_zh"]="failed"
+    try:
+        en_agent = Agent.load(get_latest_model(model_list[1]),action_endpoint=None) 
+        result["rasa_en"]="success"
+    except:
+        result["rasa_en"]="failed"
+    result_json=json.dumps(result)
+    return result_json
+
+# 模型版本確認
+@app.route('/version_check',methods=["POST"])
+def version_check():
+    data=bytes.decode(request.data)
+    data_dict = json.loads(data)
+    v=data_dict["version"]
+    zh_path="./rasa_zh/models/"
+    en_path="./rasa_en/models/"
+    zh_model_listdir=os.listdir(zh_path)
+    en_model_listdir=os.listdir(en_path)
+    model_version="v"+v
+    result={"rasa_zh":"","rasa_en":""}
+    for i in zh_model_listdir:
+        if model_version.find(i)!=-1 and os.listdir(zh_path+i)!=[]:
+            result["rasa_zh"]="existed"
+            break
+        else:
+            result["rasa_zh"]="error"
+            continue
+    for i in en_model_listdir:
+        if model_version.find(i)!=-1 and os.listdir(en_path+i)!=[]:
+            result["rasa_en"]="existed"
+            break
+        else:
+            result["rasa_en"]="error"
+            continue
+    result_json=json.dumps(result)
+    return result_json
+
+
+
 
 
 

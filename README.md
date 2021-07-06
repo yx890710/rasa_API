@@ -13,7 +13,7 @@
 ## rasa_python
 * test.py 寫了基礎透過function可以直接建立rasa project、訓練model、與agent對話
 * rasa_api.py 寫成api格式，進行各項操作（若無建立則需利用test.py建立project）
-    * 共有五隻API(db_to_rasa_data、train、chat、model_change、version_check)
+    * 共有六隻API(db_to_rasa_data、train、chat、model_change、version_check、entity_recognition)
 * Sentence_orm.py orm撈資料
 * data_to_rasa.py 靜態文件轉換func  
 * client.py 測試api的code

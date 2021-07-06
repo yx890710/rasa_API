@@ -43,6 +43,43 @@ def nlu_chatbot(agent,message):
 
 #========以上部分為對話func部分=====================================================
 
+def entity_process(entity_view,zh_text,en_text):
+    # 定義response格式
+    data={"rasa_zh":{"text":"","entities":[]},"rasa_en":{"text":"","entities":[]}}
+    zh_entity_list=[]
+    en_entity_list=[]
+    data["rasa_zh"]["text"]=zh_text
+    data["rasa_en"]["text"]=en_text
+    for i in entity_view:
+        # 中文
+        try:
+            entity_data={"entity_class":"","start_index":0,"end_index":0}
+            start_z=zh_text.index(i.zh_Entity)
+            end_z=start_z+len(i.zh_Entity)
+            entity_data["entity_class"]=i.EntityClass
+            entity_data["start_index"]=start_z
+            entity_data["end_index"]=end_z
+            zh_entity_list.append(entity_data)
+        except:
+            continue
+        # 英文
+        try:
+            entity_data={"entity_class":"","start_index":0,"end_index":0}
+            start_e=en_text.index(i.en_Entity)
+            end_e=start_e+len(i.en_Entity)
+            entity_data["entity_class"]=i.EntityClass
+            entity_data["start_index"]=start_e
+            entity_data["end_index"]=end_e
+            en_entity_list.append(entity_data)
+        except:
+            continue
+    data["rasa_zh"]["entities"]=zh_entity_list
+    data["rasa_en"]["entities"]=en_entity_list
+    return data
+
+
+#========以上部分為實體識別func部分=====================================================
+
 # 靜態文件轉換API
 @app.route('/db_to_rasa_data',methods=["POST"])
 def db_to_rasa_data():
@@ -174,9 +211,19 @@ def version_check():
     result_json=json.dumps(result)
     return result_json
 
-
-
-
+# 自動萃取實體
+@app.route('/entity_recognition',methods=["POST"])
+def entity_recognition():
+    data=bytes.decode(request.data)
+    data_dict = json.loads(data)
+    zh_text=data_dict["zh_text"]
+    en_text=data_dict["en_text"]
+    #連結資料庫
+    Entity=session.query(Entity_View).all()
+    result=entity_process(Entity,zh_text,en_text)
+    result_json=json.dumps(result)
+    return result_json
+    
 
 
 

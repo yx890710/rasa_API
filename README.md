@@ -14,6 +14,11 @@
 * test.py 寫了基礎透過function可以直接建立rasa project、訓練model、與agent對話
 * rasa_api.py 寫成api格式，進行各項操作（若無建立則需利用test.py建立project）
     * 共有六隻API(db_to_rasa_data、train、chat、model_change、version_check、entity_recognition)
+    * 缺點：非同步的狀況，容易讓資料無法同時傳遞，造成服務無法即時提供
+* rasa_api_v2.py 寫成api格式，進行各項操作（若無建立則需利用test.py建立project）
+    * 共有五隻內部API(db_to_rasa_data、train、model_change、version_check、entity_recognition)
+    * 兩隻串連rasa open API（中文：5005/model/parse，英文:5006/model/parse）
+    * 詳細資訊參考：https://rasa.com/docs/rasa/pages/http-api#operation/parseModelMessage
 * Sentence_orm.py orm撈資料
 * data_to_rasa.py 靜態文件轉換func  
 * client.py 測試api的code

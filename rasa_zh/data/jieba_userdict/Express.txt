@@ -1,3 +1,0 @@
-DHL
-FedEx
-UPS
